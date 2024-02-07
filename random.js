@@ -12,10 +12,11 @@ const randomSk = (arrOrString, valOrKeyIfObjectTrueForValFalForKeys) => {
             let vals = Object.values(arrOrString);
             let randomVals = Math.floor(Math.random() * vals.length);
             return vals[randomVals]
-        } else {
-            // Handle the case when valOrKeyIfObjectTrueForValFalForKeys is false
-            // You can customize this return statement based on your requirements
-            return 'ObjectHandlingWhenFalse';
+        }
+        else {
+            let keys = Object.keys(arrOrString);
+            let randomKeys = Math.floor(Math.random()*keys.length);
+            return keys[randomKeys];
         }
     }
 };
